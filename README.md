@@ -61,6 +61,7 @@ Launch the interactive dashboard:
 streamlit run app.py
 ```
 *The application will automatically open in your browser at `http://localhost:8501/`.*
+<img width="1917" height="928" alt="image" src="https://github.com/user-attachments/assets/a127e249-84e4-4bfc-92f7-5f94595936fe" />
 
 ---
 
