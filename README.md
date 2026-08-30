@@ -1,83 +1,76 @@
-# Customer Churn Prediction System
-
-A machine learning-powered system designed to predict customer churn risk using a Random Forest Classifier trained on the Telco Customer Churn dataset. The system features a modular data preprocessing pipeline, automated model training, a robust unit test suite, and an interactive Streamlit web dashboard.
+<div align="center">
+  <h1>📉 Customer Churn Prediction System</h1>
+  <p>
+    <strong>End-to-end customer churn prediction system featuring data preprocessing, Random Forest model training, and a Streamlit dashboard.</strong>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E.svg" alt="Scikit-Learn" />
+    <img src="https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B.svg" alt="Streamlit" />
+    <img src="https://img.shields.io/badge/Pandas-Data%20Processing-150458.svg" alt="Pandas" />
+  </p>
+</div>
 
 ---
 
-## 📁 Directory Structure
+## 📖 Overview
 
-```text
-Customer Churn Prediction System/
-├── data/
-│   ├── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Raw dataset
-│   └── cleaned_churn.csv                     # Processed dataset for model consumption
-├── src/
-│   ├── __init__.py
-│   ├── data_prep.py                          # Data cleaning, imputation, and encoding
-│   └── train.py                              # Classifier training, evaluation, and serialization
-├── tests/
-│   ├── __init__.py
-│   ├── test_data_prep.py                     # Unit tests for data preprocessing
-│   └── test_train.py                         # Unit tests for the training pipeline
-├── app.py                                    # Streamlit web dashboard
-├── model.pkl                                 # Serialized Random Forest model
-├── requirements.txt                          # Python dependencies list
-└── README.md                                 # Project documentation
+**Customer Churn Prediction System** is a machine learning-powered application designed to predict the likelihood of customers leaving a service. By inputting customer data, the system deploys a trained Random Forest model to evaluate churn risk, enabling proactive retention strategies.
+
+### 🌟 Key Features
+
+- **End-to-End Pipeline:** Seamless integration of data preprocessing, model training, evaluation, and deployment.
+- **Robust Machine Learning:** Utilizes a highly accurate Random Forest Classifier trained on comprehensive customer datasets.
+- **Interactive Dashboard:** Built on Streamlit, offering a clean, user-friendly interface for dynamic predictions.
+- **Data Insights:** Efficient data processing and feature engineering using Pandas.
+
+## 🏗️ Architecture
+
+The system is structured into key modular components:
+1. `app.py`: The presentation layer providing an interactive Streamlit web dashboard for real-time churn predictions.
+2. `src/train.py`: The model training module that orchestrates data splitting, Random Forest training, evaluation, and saving the serialized model.
+3. `src/data_prep.py`: The data engineering module responsible for cleaning, imputing, and encoding the raw dataset.
+
+---
+
+## 🚀 Quickstart Guide
+
+Want to run the Customer Churn Prediction System locally? Follow these steps:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/amritrajrajput/Customer-Churn-Prediction-System.git
+cd Customer-Churn-Prediction-System
 ```
 
----
-
-## 🚀 Getting Started
-
-### 1. Environment Setup
-Create a Python virtual environment and install the required dependencies:
-```powershell
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-.\venv\Scripts\Activate.ps1
-
-# Install requirements
+### 2. Install Dependencies
+Make sure you have Python installed, then run:
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Preprocessing & Training
-Run the data pipeline to prepare the dataset and train the machine learning model:
-```powershell
-# Run data preprocessing
-python src/data_prep.py
-
-# Train the Random Forest Classifier
+### 3. Train the Model (Optional)
+The pre-trained model is included, but you can retrain it by running:
+```bash
 python src/train.py
 ```
-This generates the serialized model (`model.pkl`) and extracts model feature importances saved to `artifacts/feature_importance.json`.
 
----
-
-## 🖥️ Running the Web App
-
-Launch the interactive Streamlit dashboard to predict customer churn risks:
-```powershell
-python -m streamlit run app.py
+### 4. Run the Streamlit App
+Launch the interactive dashboard:
+```bash
+streamlit run app.py
 ```
-Once started, open [http://localhost:8501](http://localhost:8501) in your browser. The app allows you to configure a customer's profile in the sidebar and dynamically predict their churn probability.
+*The application will automatically open in your browser at `http://localhost:8501/`.*
+<img width="1917" height="928" alt="image" src="https://github.com/user-attachments/assets/a127e249-84e4-4bfc-92f7-5f94595936fe" />
 
 ---
 
-## 🧪 Running Unit Tests
+## 💡 Why This Project Stands Out
 
-A comprehensive unit test suite is included to verify all preprocessing and model training code without affecting the production datasets or saved model:
-```powershell
-python -m unittest discover -s tests -p "test_*.py"
-```
+This project demonstrates proficiency in building **End-to-End Machine Learning** applications. It showcases the ability to take a raw dataset, engineer features, train a robust model (Random Forest), and deploy it within a **clean, user-facing full-stack Streamlit dashboard**. It bridges the gap between data science and functional software engineering.
 
 ---
 
-## 📊 Core Technologies
-- **Python 3.x**
-- **Scikit-Learn** (Random Forest Classifier)
-- **Pandas & NumPy** (Data processing)
-- **Streamlit** (Web dashboard interface)
-- **Matplotlib** (Feature driver charting)
-- **Unittest** (Testing framework)
+<p align="center">
+  <i>Built with ❤️. If you find this project interesting, feel free to check out the <a href="https://github.com/amritrajrajput/Customer-Churn-Prediction-System">GitHub Repository</a> and give it a ⭐!</i>
+</p>
